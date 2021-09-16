@@ -15,86 +15,17 @@
         <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
         <link rel="stylesheet" href="vendors/animate-css/animate.css">
         <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
         <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
-		<style>
-			/*
-			* {
-				margin: 0px;
-				padding: 0px;
-				box-sizing: border-box;
-			}
-			* body {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				width: 100%;
-				transition: all 1s ease;
-				min-height: 100vh;
-				font-family: 'Poppins';
-			}
-			*/
-			.containers {
-				display: flex;
-				flex-direction: column;
-				width: 80%;
-			}
-			@media (min-width: 500px) {
-				.containers {
-					width: 50%;
-				}
-			}
-			.containers input[type="checkbox"] {
-				display: none;
-			}
-			.btn {
-				align-self: center;
-				margin: 15px 0;
-			}
-			.box {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				width: 77px;
-				height: 28px;
-				background-color: black;
-				transition: all 1s ease;
-				position: relative;
-				border-radius: 30px;
-				cursor: pointer;
-			}
-			.box .ball {
-				width: 28px;
-				height: 28px;
-				background-color: grey;
-				transition: all 1s ease;
-				position: absolute;
-				border-radius: 50%;
-				border: 3px solid black;
-			}
-			.box .scenary {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				transition: all 1s ease;
-				
-			}
-			.box .scenary svg {
-				width: 26px;
-			}
-			li#id_button {
-    margin-top: 20px;
-}
-
-		</style>
     </head>
     <body>
         
         <!--================Header Menu Area =================-->
         <header class="header_area">
+
             <div class="main_menu">
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container box_1620">
@@ -673,7 +604,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         					</ul>
         				</aside>
         			</div>
-        		</div>
+					
+					<button onclick="topFunction()"id="myBtn"  class="btn sub-btn"><span class="lnr lnr-arrow-up"></span></button>	
+				     <!--================End Footer Area 	<a class="gotopbtn" onclick="topFunction()" href="#"> <i class="fas fa-arrow-up"></i> </a>
+        		=================-->
+					</div>
         	</div>
         </footer>
         <!--================End Footer Area =================-->
@@ -742,5 +677,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			})
 
 		</script>
+		<script>
+			//Get the button
+			var mybutton = document.getElementById("myBtn");
+			
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+			
+			function scrollFunction() {
+			  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			  } else {
+				mybutton.style.display = "none";
+			  }
+			}
+			
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+			  document.body.scrollTop = 0;
+			  document.documentElement.scrollTop = 0;
+			}
+			</script>
+			
     </body>
 </html>
